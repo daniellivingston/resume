@@ -7,6 +7,10 @@ My (probably, maybe?) up-to-date resume, written in LaTeX, and compiled/pushed v
 
 It can also be compiled via Docker. See the `docker` folder for more info. 
 
+Based off of: 
+  - https://github.com/jakegut/resume
+  - https://github.com/sb2nov/resume
+
 ## Viewing
 
 - You can [view my resume here](https://github.com/daniellivingston/resume/blob/pdf/livingston_daniel_resume.pdf).
