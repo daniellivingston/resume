@@ -33,5 +33,6 @@ jobs:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_dir: artifacts/
           publish_branch: pdf
+          force_orphan: true
 
 
