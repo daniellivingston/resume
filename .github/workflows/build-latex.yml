@@ -19,6 +19,14 @@ jobs:
       - name: Compile LaTeX document
         uses: xu-cheng/latex-action@v2
         with:
-          root_file: resume/main.tex
+          working_directory: resume/
+          root_file: main.tex
+          
+      - name: Upload PDF as artifact
+        uses: softprops/action-gh-release@v1
+        with:
+          files: main.pdf
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
 
