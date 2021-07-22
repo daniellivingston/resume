@@ -1,0 +1,58 @@
+% ================================================== 
+% Full Name                             Email: email
+% website                              Mobile: phone
+% ================================================== 
+%\begin{tabular*}{\textwidth}{l@{\extracolsep{\fill}}r}
+%   \textbf{\Large \fullname} & Email : \href{\emaillink}{\emailtext}\\
+%   \href{\websitelink}{\websitetext} & Mobile : \phone \\
+%\end{tabular*}
+
+% ================================================== 
+% address             Full Name                phone
+% city, zip                                    email
+% ================================================== 
+%{\begin{tabular}[c]{l}
+%    \small \address \\
+%    \small \city \zip 
+%\end{tabular}}\hfill
+%\textbf{\huge \scshape \fullname }\hfill
+%{\begin{tabular}[c]{r}
+%  \small \phone \\
+%  \small \emailtext
+%\end{tabular}}
+
+% ================================================== 
+%                      FULL NAME
+%             city | phone | email | web
+% ================================================== 
+\begin{center}
+    \textbf{\huge \scshape \fullname} \\ \vspace{3pt}
+    \small \city \ $|$ 
+    \small \phone \ $|$
+    \href{\emaillink}{\underline{\emailtext}} $|$ 
+    \href{\websitelink}{\underline{\websitetext}}
+\end{center}
+
+
+% ===================================== %
+% HEADER: no bounding box
+% ===================================== %
+
+%\begin{center}
+%    \textbf{\large \scshape --- Accomplished Lead Software Engineer ---} \\ \vspace{2pt}
+%    \small Polygonal Meshing \idot 3D Graphics \idot Computational Geometry \idot Geospatial Analysis \idot Parallel Programming \\
+%    \small Project Management \idot Strong Communication \idot Great Collaborator \idot Creative Problem Solver \\
+%    \small D.O.E. \& Los Alamos Award Winner \idot Los Alamos Top Performer \\
+%\end{center}
+
+% ===================================== %
+% HEADER: with bounding box
+% ===================================== %
+\begin{headerbox}[boxrule=0.3mm]
+{Accomplished Scientific Software Engineer}
+\begin{center}
+    Polygonal Meshing \idot 3D Graphics \idot Computational Geometry \idot GIS/Geospatial Analysis \idot Parallel Programming \\
+    Project Management \idot Strong Communication \idot Great Collaborator \idot Creative Problem Solver \\
+    D.O.E. \& LANL Award Winner \idot LANL Top Performer \idot Security Clearance: Top Secret/D.O.E. Q-Level\\
+\end{center}
+\end{headerbox}

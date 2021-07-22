@@ -1,0 +1,83 @@
+% ==== FONT STYLING =======================
+\def\code#1{\texttt{#1}}
+%\def\sectionFont{\ttfamily\scshape}
+\def\sectionFont{\normalfont\scshape}
+
+\newtcolorbox{headerbox}[2][]{enhanced,
+    %fonttitle=\scshape\bfseries\large,
+    fonttitle=\normalfont\bfseries\large,
+    fontupper=\rmfamily,
+    sharp corners,
+    colback=white,
+    colbacktitle=white,
+    coltitle=black,
+    boxed title style={colframe=white},
+    attach boxed title to top center={yshift=-4mm}, 
+    title=#2,#1}
+% ==== FONT STYLING =======================
+
+\pagestyle{fancy}
+\fancyhf{} % clear all header and footer fields
+\fancyfoot{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+
+\urlstyle{same}
+
+\raggedbottom
+\raggedright
+\setlength{\tabcolsep}{0in}
+
+% Sections formatting
+\titleformat{\section}{
+  \vspace{-4pt}\raggedright\large\sectionFont
+}{}{0em}{}[\color{black}\titlerule \vspace{-5pt}]
+
+% Ensure that generate pdf is machine readable/ATS parsable
+\pdfgentounicode=1
+
+%-------------------------
+% Custom commands
+\newcommand{\resumeItem}[1]{
+  \item\small{
+    {#1 \vspace{-2pt}}
+  }
+}
+
+\newcommand{\resumeSubheading}[4]{
+  \vspace{-2pt}\item
+    \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
+      \textbf{#1} & #2 \\
+      \textit{\small#3} & \textit{\small #4} \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeSubSubheading}[2]{
+    \item
+    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+      \textit{\small#1} & \textit{\small #2} \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeProjectHeading}[2]{
+    \item
+    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+      \small#1 & #2 \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeSubItem}[1]{\resumeItem{#1}\vspace{-4pt}}
+
+% Section list config
+\renewcommand\labelitemii{$\vcenter{\hbox{\tiny$\bullet$}}$} % Bullet list bullet settings
+\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=0.15in, label={}]}
+\newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
+\newcommand{\resumeItemListStart}{\begin{itemize}}
+\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-5pt}}
+
+% Inline dot (•)
+\newcommand{\idot}{$\vcenter{\hbox{\tiny $\bullet$ }}$}
+
+% ==== FOOTER TEXT =======================
+\cfoot{\small \textbf{\code{:wq}}} 
+% ==== FOOTER TEXT =======================
