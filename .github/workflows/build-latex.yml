@@ -23,10 +23,10 @@ jobs:
           root_file: main.tex
           
       - name: Upload PDF as artifact
-        uses: softprops/action-gh-release@v1
+        uses: peaceiris/actions-gh-pages@v3
         with:
-          files: main.pdf
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./
+          publish_branch: pdf
 
 
