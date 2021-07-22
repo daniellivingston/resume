@@ -21,12 +21,17 @@ jobs:
         with:
           working_directory: resume/
           root_file: main.tex
-          
+
+      - name: Prepare PDF for upload
+        run: |
+          mkdir artifacts/ && \
+          mv resume/main.pdf artifacts/livingston_daniel_resume.pdf
+
       - name: Upload PDF as artifact
         uses: peaceiris/actions-gh-pages@v3
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./
+          publish_dir: artifacts/
           publish_branch: pdf
 
 
