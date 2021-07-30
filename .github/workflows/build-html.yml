@@ -19,10 +19,8 @@ jobs:
       - name: Build HTML
         run: |
           make docker && \
-          make html && \
-          ls -alt
-          # `index.html` for GitHub Pages
-          #cp build/html/resume.html build/html/index.html
+          make html OUTFILE_PREFIX=index && \
+          ls -alt build/html/
       - name: Upload HTML as artifact
         uses: peaceiris/actions-gh-pages@v3
         with:
