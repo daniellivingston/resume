@@ -13,9 +13,10 @@ RUN apt-get update -q && \
     wget \
     && rm -rf /var/lib/apt/lists/*
 
-RUN wget -o /tmp/pandoc.deb https://github.com/jgm/pandoc/releases/download/2.14.1/pandoc-2.14.1-1-amd64.deb && \
-    dpkg -i /tmp/pandoc.deb && \
-    rm -f /tmp/pandoc.deb
+WORKDIR /artifacts
+RUN wget https://github.com/jgm/pandoc/releases/download/2.14.1/pandoc-2.14.1-1-amd64.deb && \
+    dpkg -i pandoc-2.14.1-1-amd64.deb && \
+    rm -f pandoc-2.14.1-1-amd64.deb
 
 WORKDIR /data
 VOLUME ["/data"]
