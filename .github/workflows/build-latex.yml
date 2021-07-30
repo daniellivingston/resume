@@ -1,7 +1,7 @@
 # Based on "Github Action for LaTeX"
 #  ==> https://github.com/marketplace/actions/github-action-for-latex
 
-name: Compile LaTeX PDF
+name: Compile PDF
 
 on:
   push:
