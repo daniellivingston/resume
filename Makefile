@@ -11,7 +11,7 @@ docker:
 	docker build -t latex .
 
 html:
-	docker run --rm -i -v "${PWD}":/data latex /bin/bash -c "cd /data/${ROOT_DIR} && mkdir -p /data/${OUTPUT_DIR}/html/ && pandoc ${PANDOC_FLAGS} -s ${SRC_MAIN} -o ${OUTPUT_DIR}/html/resume.html
+	docker run --rm -i -v "${PWD}":/data latex /bin/bash -c "cd /data/${ROOT_DIR} && mkdir -p /data/${OUTPUT_DIR}/html/ && pandoc ${PANDOC_FLAGS} -s ${SRC_MAIN} -o /data/${OUTPUT_DIR}/html/resume.html"
 
 pdf:
 	docker run --rm -i -v "${PWD}":/data latex /bin/bash -c "cd /data/${ROOT_DIR} && mkdir -p /data/${OUTPUT_DIR}/pdf/ && pdflatex ${PDFTEX_FLAGS} ${SRC_MAIN}"
