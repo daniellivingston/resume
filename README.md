@@ -5,13 +5,41 @@
 
 My (probably, maybe?) up-to-date resume, written in LaTeX, and compiled/pushed via GitHub Actions.
 
-It can also be compiled via Docker. See the `docker` folder for more info. 
+## Building Locally
 
-Based off of: 
-  - https://github.com/jakegut/resume
-  - https://github.com/sb2nov/resume
+A Docker container with the necessary components is used to drive local development and PDF / HTML export.
+
+### Build the Docker container
+
+```sh
+$ make docker
+```
+
+This creates a container with the default name of `latex`.
+
+### Compile Resume as PDF
+
+```sh
+$ make pdf
+```
+
+The exported files are found in `build/pdf/`.
+
+### Compile Resume as HTML
+
+```sh
+$ make html
+```
+
+The exported files are found in `build/html/`.
+
+## Inspiration / Sources
+
+- https://github.com/jakegut/resume
+- https://github.com/sb2nov/resume
 
 ## Viewing
 
-- You can [view my resume here](https://github.com/daniellivingston/resume/blob/pdf/livingston_daniel_resume.pdf).
-- It's also up [on my website here](https://daniel-livingston.com/resume/).
+- You can [view the PDF here](https://github.com/daniellivingston/resume/blob/pdf/livingston_daniel_resume.pdf).
+- You can [view the HTML here](https://daniellivingston.github.io/resume).
+- It's also rendered live [on my website here](https://daniel-livingston.com/resume/).
