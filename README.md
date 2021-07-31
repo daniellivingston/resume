@@ -23,7 +23,7 @@ This creates a container with the default name of `latex`.
 $ make pdf
 ```
 
-The exported files are found in `build/pdf/`.
+The exported files are found in `build/pdf/` amd deployed to the [`pdf` branch](https://github.com/daniellivingston/resume/tree/pdf).
 
 ### Compile Resume as HTML
 
@@ -31,7 +31,7 @@ The exported files are found in `build/pdf/`.
 $ make html
 ```
 
-The exported files are found in `build/html/`.
+The exported files are found in `build/html/` and deployed to the [`gh-pages` branch](https://github.com/daniellivingston/resume/tree/gh-pages).
 
 ## Inspiration / Sources
 
