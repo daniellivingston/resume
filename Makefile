@@ -3,7 +3,7 @@ OUTPUT_DIR:=build/
 ROOT_DIR:=resume/
 OUTFILE_PREFIX:=resume
 
-PANDOC_FLAGS:=--standalone --self-contained --mathjax --from latex --to html5 --css=../static/pandoc_styles.css --include-in-header=../static/allow_iframe_embed.html
+PANDOC_FLAGS:=--standalone --self-contained --mathjax --from latex --to html5 --css=../static/pandoc_styles.css --include-after-body=../static/allow_iframe_embed.html --include-in-header=../static/enable_latex_fonts.html
 PDFTEX_FLAGS:=-output-directory=/data/${OUTPUT_DIR}/pdf/ -output-format=pdf -halt-on-error
 
 MAKE4HT_FLAGS:=--utf8  --output-dir /data/${OUTPUT_DIR}/html/ 

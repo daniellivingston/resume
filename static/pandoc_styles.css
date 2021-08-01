@@ -1,7 +1,13 @@
 /*
- * I add this to html files generated with pandoc.
- * Source: https://gist.github.com/killercup/5917178
+ * Initially based on this [0] CSS template. Modified
+ * significantly for use in this resume.
+ *
+ * [0]: https://gist.github.com/killercup/5917178
  */
+
+.itemize {
+    padding: 0 0 0 2em;
+}
 
 .center {
     text-align: center;
@@ -17,8 +23,20 @@
     border-width: 2px;
 }
 
+
 .math {
 
+}
+
+/* Daniel R. Livingston */
+.center > p > strong > span {
+    font-size: 2.0rem;
+}
+
+/* Resume Heading */
+.headerbox > p:first-child > span {
+    font-size: 1.3rem;
+    font-weight: bold;
 }
 
 html {
@@ -30,8 +48,8 @@ html {
 
 body {
   color: #444;
-  font-family: Georgia, Palatino, 'Palatino Linotype', Times, 'Times New Roman', serif;
-  font-size: 12px;
+  /*font-family: "Computer Modern Sans", sans-serif;/*Georgia, Palatino, 'Palatino Linotype', Times, 'Times New Roman', serif;*/
+  font-size: 18px;
   line-height: 1.7;
   padding: 1em;
   margin: auto;
@@ -46,11 +64,12 @@ a {
 }
 
 a:visited {
-  color: #0b0080;
+  color: #0645ad;
 }
 
 a:hover {
   color: #06e;
+  outline: thin dotted;
 }
 
 a:active {
@@ -92,7 +111,6 @@ img {
 h1, h2, h3, h4, h5, h6 {
   color: #111;
   line-height: 125%;
-  margin-top: 2em;
   font-weight: normal;
 }
 
@@ -101,15 +119,15 @@ h4, h5, h6 {
 }
 
 h1 {
-  font-size: 2.5em;
+  font-size: 1.8rem;
 }
 
 h2 {
-  font-size: 2em;
+  font-size: 1.5rem;
 }
 
 h3 {
-  font-size: 1.5em;
+  font-size: 1.2rem;
 }
 
 h4 {
@@ -195,12 +213,24 @@ ul, ol {
   padding: 0 0 0 2em;
 }
 
+li {
+  list-style: none;
+}
+
+ul > li > ul > li {
+  list-style: circle;
+}
+
+ul > li > table:first-child {
+  list-style: none;
+}
+
 li p:last-child {
   margin-bottom: 0;
 }
 
 ul ul, ol ol {
-  margin: .3em 0;
+/*  margin: .3em 0; */
 }
 
 dl {
@@ -244,24 +274,18 @@ figcaption {
 }
 
 table {
-  margin-bottom: 2em;
-  border-bottom: 1px solid #ddd;
-  border-right: 1px solid #ddd;
   border-spacing: 0;
   border-collapse: collapse;
+  width: 100%;
+  border-left: 2px solid #000;
 }
 
 table th {
   padding: .2em 1em;
-  background-color: #eee;
-  border-top: 1px solid #ddd;
-  border-left: 1px solid #ddd;
 }
 
 table td {
   padding: .2em 1em;
-  border-top: 1px solid #ddd;
-  border-left: 1px solid #ddd;
   vertical-align: top;
 }
 
@@ -272,12 +296,12 @@ table td {
 
 @media only screen and (min-width: 480px) {
   body {
-    font-size: 14px;
+    /*font-size: 14px;*/
   }
 }
 @media only screen and (min-width: 768px) {
   body {
-    font-size: 16px;
+    /*font-size: 16px;*/
   }
 }
 @media print {
@@ -289,7 +313,7 @@ table td {
   }
 
   body {
-    font-size: 12pt;
+    /*font-size: 12pt;*/
     max-width: 100%;
   }
 
