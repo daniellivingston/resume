@@ -23,7 +23,6 @@
     border-width: 2px;
 }
 
-
 .math {
 
 }
@@ -59,7 +58,7 @@ body {
 }
 
 a {
-  color: #0645ad;
+  color: #000;
   text-decoration: none;
 }
 
@@ -73,7 +72,7 @@ a:hover {
 }
 
 a:active {
-  color: #faa700;
+  /*color: #faa700;*/
 }
 
 a:focus {
@@ -280,6 +279,7 @@ table {
   border-left: 2px solid #000;
 }
 
+
 table th {
   padding: .2em 1em;
 }
@@ -292,6 +292,19 @@ table td {
 .author {
   font-size: 1.2em;
   text-align: center;
+}
+
+/* Tables are acting weird on small screen widths. */
+@media only screen and (max-width: 600px) {
+  table,
+  tbody {
+    display:inline-block;
+  }
+
+  table tr {
+    display:flex;
+    flex-wrap:wrap;
+  }
 }
 
 @media only screen and (min-width: 480px) {

@@ -1,16 +1,16 @@
 FROM ubuntu:xenial
 ENV DEBIAN_FRONTEND noninteractive
 
-RUN apt-get update -q && \
-    apt-get install -qy \
-    curl \
-    jq \
-    texlive-full \
-    python-pygments \
-    gnuplot \
-    make \
-    git \
-    wget \
+RUN apt-get update -y && \
+    apt-get install --no-install-recommends -y \
+        curl \
+        jq \
+        texlive-full \
+        python-pygments \
+        gnuplot \
+        make \
+        git \
+        wget \
     && rm -rf /var/lib/apt/lists/*
 
 WORKDIR /artifacts
