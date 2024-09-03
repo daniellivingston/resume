@@ -3,6 +3,13 @@
 [![Compile PDF](https://github.com/daniellivingston/resume/actions/workflows/build-latex.yml/badge.svg)](https://github.com/daniellivingston/resume/actions/workflows/build-latex.yml)
 [![Compile HTML](https://github.com/daniellivingston/resume/actions/workflows/build-html.yml/badge.svg)](https://github.com/daniellivingston/resume/actions/workflows/build-html.yml)
 
+---------------
+
+- **[📎 Rendered PDF](https://github.com/daniellivingston/resume/blob/pdf/livingston_daniel_resume.pdf)**
+- **[🌐 Rendered HTML](https://daniellivingston.github.io/resume/)**
+
+---------------
+
 My (probably, maybe?) up-to-date resume, written in LaTeX, and compiled/pushed as both PDF and HTML via GitHub Actions.
 
 ## Building Locally
