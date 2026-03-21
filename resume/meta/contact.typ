@@ -1,0 +1,7 @@
+#let fullname = "Daniel R. Livingston"
+#let phone = "(505) 500\u{2013}6526"
+#let city = "Westford, MA"
+#let emailtext = "daniel.livingston@live.com"
+#let emaillink = "mailto:daniel.livingston@live.com"
+#let websitetext = "www.lvngstn.xyz"
+#let websitelink = "https://www.lvngstn.xyz"

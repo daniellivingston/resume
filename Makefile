@@ -9,7 +9,7 @@ PDFTEX_FLAGS:=-output-directory=/data/${OUTPUT_DIR}/pdf/ -output-format=pdf -hal
 MAKE4HT_FLAGS:=--utf8  --output-dir /data/${OUTPUT_DIR}/html/ 
 MAKE4HT_OPTS:=html5+mathjaxnode+svg-inline+fonts
 
-.PHONY: all docker pdf html html2
+.PHONY: all docker pdf html html2 typst
 
 docker:
 	docker build -t latex .
@@ -24,5 +24,8 @@ html2:
 
 pdf:
 	docker run --rm -i -v "${PWD}":/data latex /bin/bash -c "cd /data/${ROOT_DIR} && mkdir -p /data/${OUTPUT_DIR}/pdf/ && pdflatex ${PDFTEX_FLAGS} ${SRC_MAIN}"
+
+typst:
+	cd resume && mkdir -p ../build/pdf/ && typst compile main.typ ../build/pdf/resume-typst.pdf
 
 all: docker pdf html
